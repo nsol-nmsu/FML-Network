@@ -2,24 +2,39 @@
 
 ## Introduction
 
+FLNET2023 is a state-of-the-art benchmark dataset for intrusion detection systems, specifically for Federated Learning applications. Generated using the CORE emulator, it embodies a realistic network topology and a diverse range of traffic and attack types. FLNET2023 aims to encourage robust research in federated learning based network intrusion detection.
+
+### CORE Emulator 
+
+ Common Open Research Emulator [CORE](https://github.com/coreemu/core) is a tool for emulating networks on one or more machines. You can connect these emulated networks to live networks. CORE consists of a GUI for drawing topologies of lightweight virtual machines, and Python modules for scripting network emulation.
 
 ### Network Topology
 
-### Capture
+The dataset was generated based on the GEANT-2012 network topology, obtained from [The Internet Topology Zoo](http://www.topology-zoo.org/). This real-world topology represents a large-scale network infrastructure similar to those in Internet Service Providers (ISPs), with 40 nodes each representing primary routers serving specific locations or functions. The topology was replicated within the Common Open Research Emulator (CORE), where network traffic data was collected from ten strategically selected router nodes, labeled as {D1, D2, D3, ..., D10}, you can see in figure 1. These nodes cover different parts of the network and were chosen to provide a diverse and realistic data set.
 
 ### Network Traffic
 
+FLNET2023 includes a broad mix of both normal and malicious network traffic, providing a realistic view of network interactions. The dataset spans over several kinds of common network protocols, like HTTP, TCP, UDP, and ICMP. 
+
 ### Labelled Dataset
+
+Each instance in FLNET2023 is meticulously labeled, offering valuable information about the network flow it represents. The labels not only designate whether a given instance is normal or malicious but also provide specific details about the type of attack involved, if any. These labels significantly simplify the task of training and testing intrusion detection models.
 
 ### Atack diversity
 
+The FLNET2023 dataset prominently features four types of DDoS attacks - DDoS-dyn, DDoS-stomp, DDoS-bot, and DDoS-tcp - commonly observed in real-world network scenarios. Acknowledging that threats within a network environment extend beyond DDoS, our dataset includes a variety of other attack types such as DoS-slowhttp and Infiltration-mitm. It also encompasses web-based attacks, including Command Injection, XSS, and SQL Injection. The inclusion of these diverse attack types enhances the realism of the dataset and ensures its alignment with actual network threat landscapes.
+
 ### Feature Set
+
+The FLNET2023 dataset provides an extensive feature set, offering comprehensive details about each network flow. These features include source and destination IP addresses, port numbers, packet lengths, and timestamps, among others. This detailed feature set facilitates in-depth analysis and pattern recognition for intrusion detection models.
 
 ### MetaData
 
-## Device Details and Network topology
+FLNET2023 includes rich metadata about each instance, which provides additional context and aids in data interpretation. The metadata includes details about the routers and their ip addresses which is crucial information for a comprehensive understanding of the dataset and for the effective development and evaluation of intrusion detection models.
 
 ### Data Collection Points 
+
+The data points in the FLNET2023 dataset are collected from several unique nodes within the network topology, providing a well-rounded perspective of network activity. These collection points include various server nodes, and router nodes, each contributing to the dataset's diversity and depth. The collection points were selected with the intention of generating a dataset that reflects a broad range of network interactions. The IP address of the data collection points are given below in the table.
 
 | Node | Interface |    IPv4     |
 |------|-----------|-------------|
@@ -79,6 +94,8 @@
 |      | eth9      | 10.0.53.1/24|
 
 ### Other Router Nodes
+
+In addition to the data collection points, FLNET2023 incorporates a multitude of other router nodes, enhancing the realism and complexity of the network topology. These router nodes play pivotal roles in directing network traffic and simulating real-world network congestion and routing scenarios. Their inclusion in the topology helps portray a more authentic network environment and induces additional challenges for intrusion detection. The IP address of the other router nodes are given below in the table.
 
 | Node | Interface |    IPv4     |
 |------|-----------|-------------|
@@ -151,11 +168,9 @@
 | R29  | eth0      | 10.0.52.2/24|
 | R30  | eth0      | 10.0.51.2/24|
 
-### Other PC Nodes 
-
 
 ## Dataset URL
 
 ## License 
 
-The FLNET2023 dataset consists of 
+The FLNET2023 dataset consists of labeled network flowsincluding full packet payload in pcap format. It is publicly available for researchers to facilitate further advancements in the field of intrusion detection.
