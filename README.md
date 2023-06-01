@@ -12,15 +12,57 @@ FLNET2023 is a state-of-the-art benchmark dataset for intrusion detection system
 
 The dataset was generated based on the GEANT-2012 network topology, obtained from [The Internet Topology Zoo](http://www.topology-zoo.org/). This real-world topology represents a large-scale network infrastructure similar to those in Internet Service Providers (ISPs), with 40 nodes each representing primary routers serving specific locations or functions. The topology was replicated within the Common Open Research Emulator (CORE), where network traffic data was collected from ten strategically selected router nodes, labeled as {D1, D2, D3, ..., D10}, you can see in figure 1. These nodes cover different parts of the network and were chosen to provide a diverse and realistic data set.
 
-### Network Traffic
+### Network Attack and Simulation
 
 FLNET2023 includes a broad mix of both normal and malicious network traffic, providing a realistic view of network interactions. The dataset spans over several kinds of common network protocols, like HTTP, TCP, UDP, and ICMP. 
+
+| Attack | Duration | PPS | Size |
+| :------------- | --------------: | :------------: | :------------: |
+| Normal-D1 | 278.38 min | 6.23 pk/s | 257 MB |
+| Normal-D2 | 278.85 min |  5.41 pk/s | 222 MB |
+| Normal-D3 | 304.44 min | 10.68 pk/s  | 46.4 MB |
+| Normal-D4 | 295.77 min |  2.17 pk/s | 305 MB |
+| Normal-D5 | 262.38 min | 8.06 pk/s | 225 MB |
+| Normal-D6 | 284.33 min | 12.16 pk/s | 388 MB |
+| Normal-D7 | 294.77 min | 19.024 pk/s | 665 MB |
+| Normal-D8 | 294.77 min | 13.43 pk/s | 507 MB |
+| Normal-D9 | 286.45 min | 8.08 pk/s | 464 MB |
+| Normal-D10 | 313.83 min | 23.71 pk/s | 1.23 GB |
+| DoS-hulk-D2 | 11.38 min | 576 pk/s | 8.2 GB |
+| DoS-hulk-D4 | 10.36 min | 622 pk/s | 8.4 GB |
+| DoS-hulk-D6 | 10 min | 674 pk/s | 8.5 GB |
+| DoS-hulk-D7 | 10 min  | 375 pk/s | 4.6 GB |
+| DoS-hulk-D8 | 8.73 min  | 376 pk/s | 4.6 GB |
+| DoS-slowhttp-D1 | 4.02 min | 43 pk/s | 23.4 MB |
+| DoS-slowhttp-D2 | 4.37 min | 21 pk/s | 8.8 MB |
+| DoS-slowhttp-D3 | 8.02 min | 49 pk/s | 48.7 MB  |
+| DoS-slowhttp-D4 | 8.02 min | 40.5 pk/s | 44.1 MB |
+| DoS-slowhttp-D8 | 4.42 min | 28 pk/s | 10.0 MB |
+| DoS-slowhttp-D9 | 4.02 min | 31 pk/s | 19.7 MB |
+| DoS-slowhttp-D10 | 4.27 min | 44 pk/s | 19.7 MB |
+| DDoS-bot-D1 | 5 min | 292 pk/s | 16.4 GB |
+| DDoS-stomp-D5 | 5 min | 1298 pk/s | 41.2 GB |
+| DDoS-dyn-D9 | 10 min | 538 pk/s | 25.2 GB |
+| DDoS-tcp-D10 | 5 min | 3102 pk/s | 76.6 GB |
+| Web-sql-injection-D3 | 25.2 sec | 8 pk/s | 4.7 MB |
+| Web-sql-injection-D4 | 22.2 sec | 10 pk/s | 4.7 MB |
+| Web-command-injection-D1 | 2.00 min | 2 pk/s | 1.4 MB |
+| Web-xss-D2 | 45 sec | 34 pk/s |3.0 MB | 
+| Web-xss-D4 | 4.98 sec | 305 pk/s | 6.1 MB |
+| Infiltration-mitm-D1 | 25.47 min | 1.53 pk/s | 33.3 MB |
+| Infiltration-mitm-D2 | 52.35 min | 1.53 pk/s | 22.3 MB |
+| Infiltration-mitm-D3 | 24.93 min | 1.53 pk/s | 31.3 MB |
+| Infiltration-mitm-D4 | 24.08 min | 1.53 pk/s | 10.9 MB |
+| Infiltration-mitm-D5 | 52.47 min | 1.53 pk/s | 78.8 MB |
+| Infiltration-mitm-D7 | 31.98 min | 2.48 pk/s | 79.9 MB |
+| Infiltration-mitm-D9 | 51.78 min | 1.53 pk/s | 80.9 MB |
+| Infiltration-mitm-D10 | 22.95 min |1.53 pk/s | 35.3 MB |
 
 ### Labelled Dataset
 
 Each instance in FLNET2023 is meticulously labeled, offering valuable information about the network flow it represents. The labels not only designate whether a given instance is normal or malicious but also provide specific details about the type of attack involved, if any. These labels significantly simplify the task of training and testing intrusion detection models.
 
-### Atack diversity
+### Attack diversity
 
 The FLNET2023 dataset prominently features four types of DDoS attacks - DDoS-dyn, DDoS-stomp, DDoS-bot, and DDoS-tcp - commonly observed in real-world network scenarios. Acknowledging that threats within a network environment extend beyond DDoS, our dataset includes a variety of other attack types such as DoS-slowhttp and Infiltration-mitm. It also encompasses web-based attacks, including Command Injection, XSS, and SQL Injection. The inclusion of these diverse attack types enhances the realism of the dataset and ensures its alignment with actual network threat landscapes.
 
@@ -173,4 +215,4 @@ In addition to the data collection points, FLNET2023 incorporates a multitude of
 
 ## License 
 
-The FLNET2023 dataset consists of labeled network flowsincluding full packet payload in pcap format. It is publicly available for researchers to facilitate further advancements in the field of intrusion detection.
+The FLNET2023 dataset consists of labeled network flows including full packet payload in pcap format. It is publicly available for researchers to facilitate further advancements in the field of intrusion detection.
