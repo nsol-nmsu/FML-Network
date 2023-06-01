@@ -24,7 +24,7 @@ FLNET2023 includes a broad mix of both normal and malicious network traffic, pro
 | Normal-D4 | 295.77 min |  2.17 pk/s | 305 MB |
 | Normal-D5 | 262.38 min | 8.06 pk/s | 225 MB |
 | Normal-D6 | 284.33 min | 12.16 pk/s | 388 MB |
-| Normal-D7 | 294.77 min | 19.024 pk/s | 665 MB |
+| Normal-D7 | 294.77 min | 19.02 pk/s | 665 MB |
 | Normal-D8 | 294.77 min | 13.43 pk/s | 507 MB |
 | Normal-D9 | 286.45 min | 8.08 pk/s | 464 MB |
 | Normal-D10 | 313.83 min | 23.71 pk/s | 1.23 GB |
