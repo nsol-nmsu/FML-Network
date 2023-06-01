@@ -1,4 +1,4 @@
-# Realistic Network Intrusion Detection Evaluation Dataset for Federated Learning (FLNET2023) 
+# FLNET2023: Realistic Network Intrusion Detection Dataset for Federated Learning
 
 ## Introduction
 
@@ -211,7 +211,7 @@ In addition to the data collection points, FLNET2023 incorporates a multitude of
 | R30  | eth0      | 10.0.51.2/24|
 
 
-## Dataset URL
+### Dataset URL - 
 
 ## License 
 
