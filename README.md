@@ -10,7 +10,9 @@ FLNET2023 is a state-of-the-art benchmark dataset for intrusion detection system
 
 ### Network Topology
 
-The dataset was generated based on the GEANT-2012 network topology, obtained from [The Internet Topology Zoo](http://www.topology-zoo.org/). This real-world topology represents a large-scale network infrastructure similar to those in Internet Service Providers (ISPs), with 40 nodes each representing primary routers serving specific locations or functions. The topology was replicated within the Common Open Research Emulator (CORE), where network traffic data was collected from ten strategically selected router nodes, labeled as {D1, D2, D3, ..., D10}, you can see in figure 1. These nodes cover different parts of the network and were chosen to provide a diverse and realistic data set.
+The dataset was generated based on the GEANT-2012 network topology, obtained from [The Internet Topology Zoo](http://www.topology-zoo.org/). This real-world topology represents a large-scale network infrastructure similar to those in Internet Service Providers (ISPs), with 40 nodes each representing primary routers serving specific locations or functions. The topology was replicated within the Common Open Research Emulator (CORE), where network traffic data was collected from ten strategically selected router nodes, labeled as {D1, D2, D3, ..., D10}, you can see in figure below. These nodes cover different parts of the network and were chosen to provide a diverse and realistic data set.
+
+![Network Topology](/Topology.pdf)
 
 ### Network Attack and Simulation
 
