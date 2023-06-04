@@ -217,4 +217,4 @@ In addition to the data collection points, FLNET2023 incorporates a multitude of
 
 ## License 
 
-The FLNET2023 dataset consists of labeled network flows including full packet payload in pcap format. It is publicly available for researchers to facilitate further advancements in the field of intrusion detection.
+The FLNET2023 dataset consists of labeled network flows including full packet payload in pcap format. Additionally, associated profiles, labelled flows and CSV files optimized for Federated learning are publicly accessible for researchers. It is publicly available for researchers to facilitate further advancements in the field of intrusion detection. If you intend to utilize our dataset in your work, we kindly request that you cite our associated paper. 
