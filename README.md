@@ -1,5 +1,7 @@
 # FLNET2023: Realistic Network Intrusion Detection Dataset for Federated Learning
 
+Paper Link:
+
 ## Introduction
 
 FLNET2023 is a state-of-the-art benchmark dataset for intrusion detection systems, specifically for Federated Learning applications. Generated using the CORE emulator, it embodies a realistic network topology and a diverse range of traffic and attack types. FLNET2023 aims to encourage robust research in federated learning based network intrusion detection.
