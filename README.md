@@ -2,6 +2,8 @@
 
 ### Paper Link: [FLNET2023](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zAtgOn8AAAAJ&citation_for_view=zAtgOn8AAAAJ:zYLM7Y9cAGgC)
 
+### Dataset URL: [FLNET2023](https://eltnmsu-my.sharepoint.com/:f:/g/personal/pratyay_nmsu_edu/ErDns0cRITtEsawkCgfqYTIB7BGJ_YDfp9r-p_80v3GxIQ?e=UimpBG)
+
 ## Introduction
 
 FLNET2023 is a state-of-the-art benchmark dataset for intrusion detection systems, specifically for Federated Learning applications. Generated using the CORE emulator, it embodies a realistic network topology and a diverse range of traffic and attack types. FLNET2023 aims to encourage robust research in federated learning based network intrusion detection.
@@ -213,9 +215,6 @@ In addition to the data collection points, FLNET2023 incorporates a multitude of
 |      | eth2      | 10.0.50.2/24|
 | R29  | eth0      | 10.0.52.2/24|
 | R30  | eth0      | 10.0.51.2/24|
-
-
-### Dataset URL - [FLNET2023](https://eltnmsu-my.sharepoint.com/:f:/g/personal/pratyay_nmsu_edu/ErDns0cRITtEsawkCgfqYTIB7BGJ_YDfp9r-p_80v3GxIQ?e=UimpBG)
 
 ## License 
 
