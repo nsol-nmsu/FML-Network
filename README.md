@@ -1,6 +1,6 @@
 # FLNET2023: Realistic Network Intrusion Detection Dataset for Federated Learning
 
-### Paper Link: [FLNET2023](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zAtgOn8AAAAJ&citation_for_view=zAtgOn8AAAAJ:zYLM7Y9cAGgC)
+### Paper Link: [Link](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zAtgOn8AAAAJ&citation_for_view=zAtgOn8AAAAJ:zYLM7Y9cAGgC)
 
 ### Dataset URL: [FLNET2023](https://eltnmsu-my.sharepoint.com/:f:/g/personal/pratyay_nmsu_edu/ErDns0cRITtEsawkCgfqYTIB7BGJ_YDfp9r-p_80v3GxIQ?e=UimpBG)
 
