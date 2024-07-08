@@ -74,7 +74,7 @@ The FLNET2023 dataset prominently features four types of DDoS attacks - DDoS-dyn
 
 ### Feature Set
 
-The FLNET2023 dataset provides an extensive feature set, offering comprehensive details about each network flow. These features include source and destination IP addresses, port numbers, packet lengths, and timestamps, among others. This detailed feature set facilitates in-depth analysis and pattern recognition for intrusion detection models.
+The FLNET2023 dataset provides an extensive feature set, offering comprehensive details about each network flow. These features include source and destination IP addresses, port numbers, packet lengths, and timestamps, among others. The features are extracted using the CICFLOWMeter tool. Additionally, we have provided the PCAP files if you wish to use your own feature extractor tool.
 
 ### MetaData
 
