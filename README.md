@@ -80,6 +80,23 @@ The FLNET2023 dataset provides an extensive feature set, offering comprehensive 
 
 FLNET2023 includes rich metadata about each instance, which provides additional context and aids in data interpretation. The metadata includes details about the routers and their ip addresses which is crucial information for a comprehensive understanding of the dataset and for the effective development and evaluation of intrusion detection models.
 
+### Dataset Organization
+
+The dataset is divided into folders based on different types of network attacks and normal traffic. Each attack type, along with normal traffic, has its dedicated folder named accordingly: `DDoS`, `DoS`, `Infiltration`, `Normal`, `Web`, and `TEST`.
+
+Inside each of these folders, there are two subfolders: `CSV` and `PCAP`.
+
+- **CSV Folder**: This folder contains the data collected for each client in CSV format. Each file is named using the convention `Dataset-<ClientNumber>-<TrafficType>.csv`. For example:
+    - `Dataset-10-TCP.csv`: This file contains the TCP traffic data for client 10.
+    - `Dataset-1-BOT.csv`: This file contains the BOT traffic data for client 1.
+    
+    In some folders where there is only one type of attack, the dataset is named using the convention `Dataset-<ClientNumber>.csv` without specifying the traffic type. For example:
+    
+    - `/Infiltration/CSV/Dataset-1.csv`: This file contains the infiltration attack data for client 1.
+- **PCAP Folder**: This folder contains the corresponding packet capture (PCAP) files for each client, named in a similar fashion to the CSV files. For example:
+    - `Dataset-10-TCP.pcap`: This file contains the packet capture data for TCP traffic of client 10.
+    - `Dataset-1-BOT.pcap`: This file contains the packet capture data for BOT traffic of client 1.
+
 ### Data Collection Points 
 
 The data points in the FLNET2023 dataset are collected from several unique nodes within the network topology, providing a well-rounded perspective of network activity. These collection points include various server nodes, and router nodes, each contributing to the dataset's diversity and depth. The collection points were selected with the intention of generating a dataset that reflects a broad range of network interactions. The IP address of the data collection points are given below in the table.
@@ -215,6 +232,31 @@ In addition to the data collection points, FLNET2023 incorporates a multitude of
 |      | eth2      | 10.0.50.2/24|
 | R29  | eth0      | 10.0.52.2/24|
 | R30  | eth0      | 10.0.51.2/24|
+
+### How to use the dataset
+
+Follow the steps below to effectively use the dataset for training and testing your machine-learning models:
+
+1. **Download the Dataset**: Download the dataset from the link provided above. 
+2. **Navigating the Folders**: Choose the folder corresponding to the type of traffic or attack you are interested in (e.g., `DDoS`, `DoS`, `Infiltration`, `Normal`, `Web`, `TEST`).
+3. **Preparing the Training Data**:
+    - Navigate to the `CSV` folder within the selected traffic type.
+    - Select the appropriate CSV files for the clients you want to include in the training set.
+    - For example, to include TCP traffic data for client 10 in the `DDoS` folder, navigate to `DDoS/CSV/Dataset-10-TCP.csv`.
+    - To include normal traffic, navigate to `Normal/CSV/Dataset-10.csv`.
+    - Load the CSV files into your preferred data analysis tool (e.g., Python using pandas).
+    - Combine data from multiple clients if needed. For example, you can combine local data for clients 1 to 10.
+4. **Training the Model**:
+    - Train your machine learning model using the training set.
+    - In a federated learning setup, local models are trained on each client's data, and then the models are aggregated to form a global model.
+5. **Testing the Global Model**:
+    - We have provided the test data for each label.
+    - Combine these data to form your test set for the global model.
+    - Navigate to the `TEST` folder.
+    - Inside `TEST`, go to the `CSV` folder and select the test CSV files.
+    - For example, `TEST/CSV/slowHTTP.csv` contains the Slow HTTP test data.
+    - Load the test CSV files into your data analysis tool.
+    - Evaluate the global model using the combined test set.
 
 ## License 
 
